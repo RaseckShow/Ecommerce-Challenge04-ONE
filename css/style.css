@@ -23,6 +23,7 @@
     margin-left: 10%;
     padding-left: 15%;
     font-size: 1.2rem;
+    color: #808080;
     background-color: #f3f3f3;
     border-color: none;
     outline: none;
@@ -31,11 +32,9 @@
     background: url(../img/lupa.png) no-repeat 5px ;
     transform: scale(0.8);
 }
-.menu__buscador:hover{
-    transform: scale(1.1);
-}
 .input__buscador:focus{
     color: #808080;
+    transform: scale(0.85,0.85);
 }
 .menu__header__btn{
     margin-right: 10vw;
