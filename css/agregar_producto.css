@@ -1,0 +1,164 @@
+/* Seccion Header */
+.menu__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+}
+.menu__items{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+}
+.menu__buscador{
+    display: flex;
+    align-items: center;
+}
+.input__buscador{
+    width: 30vw;
+    height: 2.5rem;
+    border-radius: 20px;
+    margin-left: 10%;
+    padding-left: 15%;
+    font-size: 1.2rem;
+    color: #808080;
+    background-color: #f3f3f3;
+    border-color: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background: url(../img/lupa.png) no-repeat 5px ;
+    transform: scale(0.8);
+}
+.input__buscador:focus{
+    color: #808080;
+    transform: scale(0.85,0.85);
+}
+/* Seccion Login */
+.agregarProducto__container{
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title__agregarProducto{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 3%;
+    margin-bottom: 1.5%;
+}
+.agregarProducto__form{
+    display: flex;
+    flex-direction: column;
+}
+.img__zone{
+    width: 50vw;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5%;
+}
+.dropzone__agregarProducto{
+    border: 2px dotted #808080;
+    width: 40vw;
+    height: 5vh;
+    text-align: center;
+    margin-right: 3%;
+    padding: 6% ;
+}
+.input__file{
+    margin-left: 3%;
+    height: 2rem;
+}
+.input__descripcion{
+    resize:none;
+    outline: none;
+    border: none;
+    margin-bottom: 3%;
+}
+.input__agregarProducto, .agregarProducto__btn{
+    width: 50vw;
+    height: 2.5rem;
+    margin-bottom: 2%;
+    outline: none;
+    border: none;
+}
+.agregarProducto__btn{
+    color: #fdfdfd;
+    height: 3rem;
+    background-color: #2A7AE4;
+    font-size: 1.1rem;
+    margin-bottom: 30%;
+}
+.input__agregarProducto:focus , .input__descripcion:focus{
+    border-bottom:2px dotted #2A7AE4;
+}
+
+/* Seccion Rodapie */
+.footer__container{
+    width: 100%;    
+}
+.footer__contacto{
+    background-color: #DFFDFF;
+    padding: 4% 6%;
+    display: flex;
+    justify-content: space-around;
+}
+.contacto__img{
+    height: 2rem;
+}
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    font-weight: 500;
+}
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.text__contacto{
+    font-weight: bolder;
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+.input__name, .input__mensaje{
+    background-color: #fdfdfd;
+    border: none;
+    margin-bottom: 3%;
+    padding-left: 3%;
+}
+.input__name{
+    height: 2rem;
+    border-radius: 15px;
+}
+.input__mensaje{
+    border-radius: 15px;
+    resize: none;
+    font-size: .9rem;
+}
+.input__name::placeholder, .input__mensaje::placeholder{
+    color: darkgrey;
+}
+.input__name:focus, .input__mensaje:focus{
+    outline: dashed #808080 ;
+}
+.contacto__btn{
+    width: 40%;
+    height: 2rem;
+    margin-left: 4%;
+    background: #2A7AE4;
+    color: #fdfdfd;
+    border: none;
+    border-radius: 8px;
+}
+.contacto__btn:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.footer__rodapie{
+    text-align: center;
+    padding: 1% 0;
+}
