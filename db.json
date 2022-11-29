@@ -1,0 +1,44 @@
+{
+"producto": [
+    {
+      "name": "One",
+      "imageUrl": "img/star_wars/producto_001.png",
+      "price": "100.00",
+      "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
+      "id": 4
+    },
+    {
+      "name": "Alura latam",
+      "imageUrl": "img/star_wars/producto_002.png",
+      "price": "5",
+      "id": 6,
+      "description": ""
+    },
+    {
+      "name": "bic",
+      "imageUrl": "img/star_wars/producto_003.png",
+      "price": "10",
+      "id": 7
+    },
+    {
+      "name": "Cuidado!",
+      "imageUrl": "img/star_wars/producto_004.png",
+      "price": "123",
+      "id": 8,
+      "description": "Apenas um teste!"
+    },
+    {
+      "name": "Super Man",
+      "imageUrl": "img/star_wars/producto_005.png",
+      "price": "20",
+      "id": 14
+    },
+    {
+      "name": "Darth Vader",
+      "imageUrl": "img/star_wars/producto_006.png",
+      "price": "25",
+      "id": 15
+    }
+    
+  ]
+}
