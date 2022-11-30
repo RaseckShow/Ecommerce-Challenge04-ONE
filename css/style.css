@@ -176,8 +176,10 @@
 .input__name{
     height: 2rem;
     border-radius: 15px;
+    width: 90%;
 }
 .input__mensaje{
+    width: 90%;
     border-radius: 15px;
     resize: none;
     font-size: .9rem;
