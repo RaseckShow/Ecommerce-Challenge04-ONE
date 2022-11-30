@@ -61,6 +61,7 @@
 .dropzone__agregarProducto{
     border: 2px dotted #808080;
     width: 40vw;
+    color: #808080;
     height: 5vh;
     text-align: center;
     margin-right: 3%;
@@ -69,6 +70,9 @@
 .input__file{
     margin-left: 3%;
     height: 2rem;
+}
+.input__categoryProduct, .input__agregarProducto, .input__descripcion{
+    color: #808080;
 }
 .input__descripcion{
     resize:none;
