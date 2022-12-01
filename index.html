@@ -26,12 +26,12 @@
         <div class="banner__text">
             <h2 class="banner__titletext">Invierno Promocional</h2>
             <p class="banner__subtext">Productos seleccionados con 40% de descuento</p>
-            <a href=""><button class="banner__btn">Ver Consolas</button></a>
+            <a href="#consolas"><button class="banner__btn">Ver Consolas</button></a>
         </div>
     </section>
     
     <section class="productos__container">
-        <div class="productos__starwars">
+        <div class="productos__starwars" data-category>
             <div class="productos__title">
                 <h2 class="title__starwars">Star Wars</h2>
                 <a href="#"><button class="vertodo__btn">Ver Todo &#10140</button></a>
@@ -82,12 +82,12 @@
         </div>
     
         
-        <div class="productos__consolas">
+        <div class="productos__consolas" id="consolas" data-category>
             <div class="productos__title">
                 <h2 class="title__consolas">Consolas</h2>
                 <a href="#"><button class="vertodo__btn">Ver Todo &#10140</button></a>
             </div>
-            <div class="productos__list">
+            <div class="productos__list" data-productos>
                 <!-- <div class="producto__box">
                     <img src="img/consolas/producto_001.png" alt="" class="producto__img">
                     <h3 class="producto__name">Consola XYZ</h3>
@@ -133,12 +133,12 @@
         </div>
     
         
-        <div class="productos__diversos">
+        <div class="productos__diversos" data-category>
             <div class="productos__title">
                 <h2 class="title__diversos">Diversos</h2>
                 <a href="#"><button class="vertodo__btn">Ver Todo &#10140</button></a>
             </div>
-            <div class="productos__list">
+            <div class="productos__list" data-productos>
                 <!-- <div class="producto__box">
                     <img src="img/diversos/producto_001.png" alt="" class="producto__img">
                     <h3 class="producto__name">Camisa atari</h3>
@@ -197,15 +197,29 @@
             </div>
             <div class="contacto__form">
                 <p class="text__contacto">Hable con nosotros</p>
-                <input type="text" class="input__name" placeholder="Nombre">
-                <textarea class="input__mensaje" placeholder="Ingrese su mensaje aqui..." name="" id="" cols="30" rows="5"></textarea>
-                <a href=""><button class="contacto__btn">Enviar mensaje</button></a></div>
+                <form action="" class="formulario__contact" id="formulario__contact">
+                    <div class="input-container" id="input__container__nombre">
+                        <span class="input-message-error" id="nombre-error">Este campo no es valido</span>
+                        <input type="text" name="name" class="input__name input__contacto input" placeholder="Nombre"data-tipo="name">
+                        
+                    </div>
+                    <div class="input-container" id="input__container__mensaje">
+                        <span class="input-message-error" id="mensaje-error">Este campo no es valido</span>
+                        <textarea class="input__mensaje input__contacto input" placeholder="Ingrese su mensaje aqui..." name="mensaje" id="" cols="30" rows="5"  data-tipo="mensaje"></textarea>
+                        
+                    </div>
+                    
+                    <button class="contacto__btn" type="submit">Enviar mensaje</button>
+                </form>
+                <span id="mensaje__envioCorrecto" class="mensaje__envioCorrecto">El formulario se envio correctamente</span>
             </div>
+        </div>
         <div class="footer__rodapie">
             <p>Desarrollado por Cesar Navarro - 2022</p>
             <p>Todos los derechos reservados &copy</p>
         </div>
     </section>
     <script type="module" src="/controllers/productos-controller.js"></script>
+    <script src="scripts/validacion.js" type="module"></script>
 </body>
 </html>

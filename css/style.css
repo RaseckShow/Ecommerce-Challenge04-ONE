@@ -207,3 +207,30 @@
     text-align: center;
     padding: 1% 0;
 }
+/* ///validacion Formulario Contacto/// */
+.input-message-error{
+    display: none;
+    justify-content: center;
+    color: #ff000080;
+}
+.input__container-invalido .input{
+    border:2px dotted #ff000060;
+
+}
+.input__container-valido .input{
+    border:3px dotted #00DCF5;
+    
+}
+.mensaje__envioCorrecto, .mensaje__envioIncorrecto{
+    display: none;
+}
+.mensaje__envioCorrecto-activo{
+    color: #303030;
+    margin-top: 2%;
+    background-color: rgb(126, 242, 186);
+    border-radius: 15px;
+    opacity: 0.9;
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+}
