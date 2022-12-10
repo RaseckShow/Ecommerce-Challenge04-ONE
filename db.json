@@ -140,6 +140,10 @@
   {
     "email": "cesar@alura.com",
     "password": "Asd12345"
+  },
+  {
+    "email": "fer@alura.com",
+    "password": "Qwerty123"
   }
 ]
 }
