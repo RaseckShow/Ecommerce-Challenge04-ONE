@@ -22,11 +22,18 @@
     
     <section class="login__container">
         <h3 class="title__login">Iniciar Sesion</h3>
-        <form class="login__form" action="">
-            <input class="input__email input__login" type="email" placeholder="Escriba su correo electronico">
-            <input class="input__pass input__login" type="password" placeholder="Escriba su contraseña">
-            <button class="login__btn">Entrar</button>
+        <form class="login__form" id="formulario__login" action="">
+            <div class="input-container" id="input__container__email">
+                <span class="input-message-error" id="email-error">Ingrese un email valido</span>
+                <input class="input__email input__login input" name="email" type="email" placeholder="Escriba su correo electronico">                
+            </div>
+            <div class="input-container" id="input__container__password">
+                <span class="input-message-error" id="password-error">Ingrese una contraseña valida</span>
+                <input class="input__pass input__login input" name="password" type="password" placeholder="Escriba su contraseña">
+            </div>
+            <button type="submit" id="btnLogin" class="login__btn">Entrar</button>
         </form>
+        <span id="mensaje__accesoDenegado" class="mensaje__accesoDenegado">El correo y/o contraseña son incorrectos</span>
     </section>
     
     <section class="footer__container">
@@ -51,5 +58,7 @@
             <p>Todos los derechos reservados &copy</p>
         </div>
     </section>
+    <script type="module" src="scripts/controllers/validarAcceso-controller.js"></script>
+    <script type="module" src="scripts/servicios/login_validacion.js"></script>
 </body>
 </html>

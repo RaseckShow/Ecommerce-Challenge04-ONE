@@ -39,7 +39,7 @@
 .login__container{
     background-color: #f8f8f8;
     display: flex;
-    
+    height: 80vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -47,10 +47,14 @@
 .title__login{
     font-size: 1.3rem;
     font-weight: 600;
-    margin-top: 10%;
     margin-bottom: 1%;
 }
 .login__form{
+    display: flex;
+    flex-direction: column;
+    height:40vh;
+}
+.input-container{
     display: flex;
     flex-direction: column;
 }
@@ -66,10 +70,43 @@
     height: 3rem;
     background-color: #2A7AE4;
     font-size: 1.1rem;
-    margin-bottom: 30%;
+    margin-bottom: 5%;
+}
+.login__btn:hover{
+    cursor: pointer;
+}
+.login__btn:active{
+    transform: scale(0.95,0.95);
 }
 .input__login:focus{
     border-bottom:2px dotted #2A7AE4;
+}
+
+.input-message-error{
+    display: none;
+    justify-content: center;
+    color: #ff000080;
+}
+.input__container-invalido .input{
+    border-bottom:3px dotted #ff000060;
+
+}
+.input__container-valido .input{
+    border:3px dotted #00DCF5;
+    
+}
+.mensaje__accesoDenegado{
+    display: none;
+}
+.mensaje__accesoDenegado-activo{
+    color: #fdfdfd;
+    background-color: rgb(147, 12, 12);
+    border-radius: 5px;
+    opacity: 0.9;
+    padding: 1%;
+    display: flex;
+    margin-top: -1%;
+    justify-content: center;
 }
 
 /* Seccion Rodapie */
