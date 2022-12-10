@@ -19,7 +19,6 @@ const producto = document.querySelectorAll("[data-productos]");
 
 const render = async() => {
     try{
-        console.log(producto);
         const listaProductos = await productoServices.listaProductos();
         listaProductos.forEach(elemento => {
             const categoria = elemento.category;
@@ -35,7 +34,6 @@ const render = async() => {
                 break;
                     
             }
-            // producto.appendChild(nuevoProducto(elemento.name, elemento.price,elemento.imageUrl))
         });
     }
     catch(error){
