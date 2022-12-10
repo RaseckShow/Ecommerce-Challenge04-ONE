@@ -4,6 +4,7 @@
       "name": "One",
       "imageUrl": "img/star_wars/producto_001.png",
       "price": "100.00",
+      "category":"star wars", 
       "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "id": 4
     },
@@ -12,12 +13,14 @@
       "imageUrl": "img/star_wars/producto_002.png",
       "price": "5",
       "id": 6,
+      "category":"star wars",
       "description": ""
     },
     {
       "name": "bic",
       "imageUrl": "img/star_wars/producto_003.png",
       "price": "10",
+      "category":"star wars",
       "id": 7
     },
     {
@@ -25,20 +28,118 @@
       "imageUrl": "img/star_wars/producto_004.png",
       "price": "123",
       "id": 8,
+      "category":"star wars",
       "description": "Apenas um teste!"
     },
     {
       "name": "Super Man",
       "imageUrl": "img/star_wars/producto_005.png",
       "price": "20",
+      "category":"star wars",
       "id": 14
     },
     {
       "name": "Darth Vader",
       "imageUrl": "img/star_wars/producto_006.png",
       "price": "25",
+      "category":"star wars",
+      "id": 15
+    },
+    {
+      "name": "Nintendo",
+      "imageUrl": "img/consolas/producto_001.png",
+      "price": "100.00",
+      "category":"consolas", 
+      "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
+      "id": 4
+    },
+    {
+      "name": "Asus",
+      "imageUrl": "img/consolas/producto_002.png",
+      "price": "5",
+      "id": 6,
+      "category":"consolas",
+      "description": ""
+    },
+    {
+      "name": "Lenovo",
+      "imageUrl": "img/consolas/producto_003.png",
+      "price": "10",
+      "category":"consolas",
+      "id": 7
+    },
+    {
+      "name": "Coca Cola",
+      "imageUrl": "img/consolas/producto_004.png",
+      "price": "123",
+      "id": 8,
+      "category":"consolas",
+      "description": "Apenas um teste!"
+    },
+    {
+      "name": "Thor",
+      "imageUrl": "img/consolas/producto_005.png",
+      "price": "20",
+      "category":"consolas",
+      "id": 14
+    },
+    {
+      "name": "Iron Man",
+      "imageUrl": "img/consolas/producto_006.png",
+      "price": "25",
+      "category":"consolas",
+      "id": 15
+    },
+    {
+      "name": "Spotify",
+      "imageUrl": "img/diversos/producto_001.png",
+      "price": "100.00",
+      "category":"diversos", 
+      "description": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
+      "id": 4
+    },
+    {
+      "name": "Ultimate",
+      "imageUrl": "img/diversos/producto_002.png",
+      "price": "5",
+      "id": 6,
+      "category":"diversos",
+      "description": ""
+    },
+    {
+      "name": "Microsoft",
+      "imageUrl": "img/diversos/producto_003.png",
+      "price": "10",
+      "category":"diversos",
+      "id": 7
+    },
+    {
+      "name": "Visual Studio Code",
+      "imageUrl": "img/diversos/producto_004.png",
+      "price": "123",
+      "id": 8,
+      "category":"diversos",
+      "description": "Apenas um teste!"
+    },
+    {
+      "name": "Github",
+      "imageUrl": "img/diversos/producto_005.png",
+      "price": "20",
+      "category":"diversos",
+      "id": 14
+    },
+    {
+      "name": "Virtual Box",
+      "imageUrl": "img/diversos/producto_006.png",
+      "price": "25",
+      "category":"diversos",
       "id": 15
     }
-    
-  ]
+  ],
+"admins": [
+  {
+    "email": "cesar@alura.com",
+    "password": "Asd12345"
+  }
+]
 }
