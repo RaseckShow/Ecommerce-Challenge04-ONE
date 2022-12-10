@@ -117,6 +117,9 @@
     justify-content: space-around;
     margin: 0 5%;
 }
+.card{
+  margin-top: .5%;  
+}
 .producto__box{
     display: flex;
     flex-direction: column;
