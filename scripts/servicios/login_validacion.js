@@ -42,12 +42,4 @@ inputs.forEach((input) => {
 formulario.addEventListener("submit", (e) =>{
   e.preventDefault();
 
-  if(campos.email && campos.password){
-    document.getElementById("input__container__email").classList.remove("input__container-valido");
-    document.getElementById("input__container__password").classList.remove("input__container-valido");
-    document.getElementById("mensaje__accesoDenegado").classList.add("mensaje__accesoDenegado-activo");
-    setTimeout(() =>{
-      document.getElementById("mensaje__accesoDenegado").classList.remove("mensaje__accesoDenegado-activo");
-    }, 2500);
-  }
 });
