@@ -23,12 +23,15 @@
     <section class="agregarProducto__container">
         <h3 class="title__agregarProducto">Agregar Producto</h3>
         <form class="agregarProducto__form" action="">
-            <div  class="img__zone" >
-                <p class="dropzone__agregarProducto" ondrop="dropHandler(event);">Arrastra y suelta un archivo a esta zona ...</p>
-                <p>O</p>
-                <input class="input__file input__agregarProducto" type="file" accept=".jpg,.png,.jpeg">
+            <div  class="img__zone dropzone__agregarProducto" >
+                <div id="preview" class="preview">
+                    <p>Arrastra y suelta una imagen a esta zona ...</p>
+                </div>
+                
+                <span>o</span>
+                <button class="input__file">Seleccionar imagen</button>
+                <input type="file" accept="image/*" hidden>
             </div>
- 
             <input class="input__nameProduct input__agregarProducto" type="text" placeholder="Escriba el nombre del producto">
             <select class="input__categoryProduct input__agregarProducto" name="category__producto" id="">
                 <option value="star wars">Star Wars</option>
@@ -66,5 +69,6 @@
             <p>Todos los derechos reservados &copy</p>
         </div>
     </section>
+    <script type="module" src="scripts/nuevoProductoValidacion.js"></script>
 </body>
 </html>
