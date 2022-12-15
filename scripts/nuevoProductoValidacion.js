@@ -68,7 +68,7 @@ function processFile(file) {
 function uploadFile(file) {
     
 }
-//////////////////////////////
+////////Seccion Validacion Formulario////////////////
 const formulario = document.getElementById("agregarProducto__form");
 const inputs = document.querySelectorAll(".input__agregarProducto");
 
@@ -133,70 +133,45 @@ const validarCampo = (expresion, input, campo) =>{
 inputs.forEach((input) => {
     input.addEventListener("blur",validarFormulario)
 });
-
+///////// Seccion Envio de Data al Servidor///////////
 formulario.addEventListener("submit", (evento) =>{
-  evento.preventDefault();
-
-  if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
-    // ((((((((((((()))))))))))))
-const getData = () =>{
-    const datos = new FormData(formulario);
-
-    const datosCompletos = Object.fromEntries(datos.entries());
-    return datosCompletos;
-}
-// ((((((((((()))))))))))
-const postData = async () => {
-    const nuevoProducto = getData();
-    try {
-        const response = await fetch("http://localhost:3000/producto", {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(nuevoProducto)
-        });
-        if(response.ok){
-                formulario.reset();
-                
-                document.getElementById("input__container__precio").classList.remove("input__container-valido");
-                document.getElementById("input__container__categoria").classList.remove("input__container-valido");
-                
-                document.getElementById("input__container__nombre").classList.remove("input__container-valido");
-                document.getElementById("input__container__descripcion").classList.remove("input__container-valido");
-                document.getElementById("mensaje__envioCorrecto").classList.add("mensaje__envioCorrecto-activo");
-                setTimeout(() =>{
-                  document.getElementById("mensaje__envioCorrecto").classList.remove("mensaje__envioCorrecto-activo");
-                }, 2500);
+    evento.preventDefault();
+    if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
+        const getData = () =>{
+            const datos = new FormData(formulario);
+            const datosCompletos = Object.fromEntries(datos.entries());
+            return datosCompletos;
         }
-    }catch (error) {
-        console.log(error);
+        const postData = async () => {
+            const nuevoProducto = getData();
+            try {
+                const response = await fetch("http://localhost:3000/producto", {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(nuevoProducto)
+                });
+                if(response.ok){
+                    formulario.reset();
+                        
+                    document.getElementById("input__container__precio").classList.remove("input__container-valido");
+                    document.getElementById("input__container__categoria").classList.remove("input__container-valido");            
+                    document.getElementById("input__container__nombre").classList.remove("input__container-valido");
+                    document.getElementById("input__container__descripcion").classList.remove("input__container-valido");
+                    document.getElementById("mensaje__envioCorrecto").classList.add("mensaje__envioCorrecto-activo");
+                    setTimeout(() =>{
+                        document.getElementById("mensaje__envioCorrecto").classList.remove("mensaje__envioCorrecto-activo");
+                    }, 2500);
+                }
+            }catch (error) {
+                console.log(error);
+            }
+        }
+        postData();
+    }else{
+        alert("Debe llenar el formulario");
     }
-}
-//  (((((((((((()))))))))))) 
-    postData();
-//  (((((((((((()))))))))))) 
-//   if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
-    
-//     formulario.reset();
-    
-//     document.getElementById("input__container__precio").classList.remove("input__container-valido");
-//     document.getElementById("input__container__categoria").classList.remove("input__container-valido");
-    
-//     document.getElementById("input__container__nombre").classList.remove("input__container-valido");
-//     document.getElementById("input__container__descripcion").classList.remove("input__container-valido");
-//     document.getElementById("mensaje__envioCorrecto").classList.add("mensaje__envioCorrecto-activo");
-//     setTimeout(() =>{
-//       document.getElementById("mensaje__envioCorrecto").classList.remove("mensaje__envioCorrecto-activo");
-//     }, 2500);
-//   }
-
-  }else{
-    alert("Debe llenar el formulario");
-  }
-
 });
-// Apenas se logro la validacion de los inputs pero aun falta 
-// mostar cuales son los values recibidos en el formulario
-// y tambien mostrar el mensaje de envio corrcto del formulario
+
 
 
 
