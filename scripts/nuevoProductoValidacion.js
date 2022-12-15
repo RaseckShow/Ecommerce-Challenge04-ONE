@@ -1,57 +1,4 @@
-// const formulario = document.getElementById("formulario__contact");
-// const inputs = document.querySelectorAll(".input__agregarProducto");
-
-// const expresiones = {
-//   nombre: /^[a-zA-Z\s]{2,40}$/,
-//   mensaje: /[\s\S]{10,120}/
-// };
-
-// const campos = {
-//   nombre: false,
-//   mensaje: false
-// };
-
-// const validarFormulario = (e) =>{
-//     switch(e.target.name){
-//     case "name":
-//       validarCampo(expresiones.nombre, e.target, "nombre");
-//     break;
-//     case "mensaje":
-//       validarCampo(expresiones.mensaje, e.target, "mensaje");
-//     break;
-//   }
-// }
-// const validarCampo = (expresion, input, campo) =>{
-//   if(expresion.test(input.value)){
-//     document.getElementById(`input__container__${campo}`).classList.remove("input__container-invalido");
-//     document.getElementById(`input__container__${campo}`).classList.add("input__container-valido");
-//     document.getElementById(`${campo}-error`).style.display = "none";
-//     campos[campo] = true;
-//   }else{
-//     document.getElementById(`input__container__${campo}`).classList.remove("input__container-valido");
-//     document.getElementById(`input__container__${campo}`).classList.add("input__container-invalido");
-//     document.getElementById(`${campo}-error`).style.display = "flex";
-//     campos[campo] = false;
-//   }
-// }
-
-// inputs.forEach((input) => {
-//   input.addEventListener("blur",validarFormulario)
-// });
-
-// formulario.addEventListener("submit", (e) =>{
-//   e.preventDefault();
-//   if(campos.nombre && campos.mensaje){
-//     formulario.reset();
-//     document.getElementById("input__container__nombre").classList.remove("input__container-valido");
-//     document.getElementById("input__container__mensaje").classList.remove("input__container-valido");
-//     document.getElementById("mensaje__envioCorrecto").classList.add("mensaje__envioCorrecto-activo");
-//     setTimeout(() =>{
-//       document.getElementById("mensaje__envioCorrecto").classList.remove("mensaje__envioCorrecto-activo");
-//     }, 2500);
-//   }
-// });
-
+// Seccion Validacion de imagen
 const dropZone = document.querySelector(".dropzone__agregarProducto");
 const dragText = dropZone.querySelector("p");
 const button = dropZone.querySelector(".input__file");
@@ -111,6 +58,7 @@ function processFile(file) {
         }
     }
     else {
+        dropZone.classList.remove("valido");
         dropZone.querySelector("img").remove(this);
         dropZone.querySelector("p").innerHTML = "Arrastra y suelta una imagen a esta zona ...";
         alert("Debe ingresar una imagen");
@@ -120,3 +68,136 @@ function processFile(file) {
 function uploadFile(file) {
     
 }
+//////////////////////////////
+const formulario = document.getElementById("agregarProducto__form");
+const inputs = document.querySelectorAll(".input__agregarProducto");
+
+const expresiones = {
+    nombre: /^[a-zA-Z\s]{1,20}$/,
+    precio: /^\d+$/,
+    descripcion: /[\s\S]{5,150}/
+};
+
+const campos = {
+    nombre: false,
+    categoria: false,
+    precio: false,
+    descripcion: false
+};
+
+const validarFormulario = (ev) =>{
+    switch(ev.target.name){
+        case "nombre":
+            validarCampo(expresiones.nombre, ev.target, "nombre");
+        break;
+        case "categoria":
+            validarOtherCampo(ev.target, "categoria")
+        break;
+        case "precio":
+            validarCampo(expresiones.precio, ev.target, "precio");
+        break;
+        case "descripcion":
+            validarCampo(expresiones.descripcion, ev.target, "descripcion");
+        break;
+    }
+}
+const validarOtherCampo = (input, campo) =>{
+    if (input.value != "") {
+        document.getElementById(`input__container__${campo}`).classList.remove("input__container-invalido");
+        document.getElementById(`input__container__${campo}`).classList.add("input__container-valido");
+        document.getElementById(`${campo}-error`).style.display = "none";
+        campos[campo] = true;        
+    }else{
+        console.log("NULL");
+        document.getElementById(`input__container__${campo}`).classList.remove("input__container-valido");
+        document.getElementById(`input__container__${campo}`).classList.add("input__container-invalido");
+        document.getElementById(`${campo}-error`).style.display = "flex";
+        campos[campo] = false;
+    }
+
+}
+const validarCampo = (expresion, input, campo) =>{
+    if(expresion.test(input.value)){
+        document.getElementById(`input__container__${campo}`).classList.remove("input__container-invalido");
+        document.getElementById(`input__container__${campo}`).classList.add("input__container-valido");
+        document.getElementById(`${campo}-error`).style.display = "none";
+        campos[campo] = true;
+    }else{
+        document.getElementById(`input__container__${campo}`).classList.remove("input__container-valido");
+        document.getElementById(`input__container__${campo}`).classList.add("input__container-invalido");
+        document.getElementById(`${campo}-error`).style.display = "flex";
+        campos[campo] = false;
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("blur",validarFormulario)
+});
+
+formulario.addEventListener("submit", (evento) =>{
+  evento.preventDefault();
+
+  if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
+    // ((((((((((((()))))))))))))
+const getData = () =>{
+    const datos = new FormData(formulario);
+
+    const datosCompletos = Object.fromEntries(datos.entries());
+    return datosCompletos;
+}
+// ((((((((((()))))))))))
+const postData = async () => {
+    const nuevoProducto = getData();
+    try {
+        const response = await fetch("http://localhost:3000/producto", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(nuevoProducto)
+        });
+        if(response.ok){
+                formulario.reset();
+                
+                document.getElementById("input__container__precio").classList.remove("input__container-valido");
+                document.getElementById("input__container__categoria").classList.remove("input__container-valido");
+                
+                document.getElementById("input__container__nombre").classList.remove("input__container-valido");
+                document.getElementById("input__container__descripcion").classList.remove("input__container-valido");
+                document.getElementById("mensaje__envioCorrecto").classList.add("mensaje__envioCorrecto-activo");
+                setTimeout(() =>{
+                  document.getElementById("mensaje__envioCorrecto").classList.remove("mensaje__envioCorrecto-activo");
+                }, 2500);
+        }
+    }catch (error) {
+        console.log(error);
+    }
+}
+//  (((((((((((()))))))))))) 
+    postData();
+//  (((((((((((()))))))))))) 
+//   if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
+    
+//     formulario.reset();
+    
+//     document.getElementById("input__container__precio").classList.remove("input__container-valido");
+//     document.getElementById("input__container__categoria").classList.remove("input__container-valido");
+    
+//     document.getElementById("input__container__nombre").classList.remove("input__container-valido");
+//     document.getElementById("input__container__descripcion").classList.remove("input__container-valido");
+//     document.getElementById("mensaje__envioCorrecto").classList.add("mensaje__envioCorrecto-activo");
+//     setTimeout(() =>{
+//       document.getElementById("mensaje__envioCorrecto").classList.remove("mensaje__envioCorrecto-activo");
+//     }, 2500);
+//   }
+
+  }else{
+    alert("Debe llenar el formulario");
+  }
+
+});
+// Apenas se logro la validacion de los inputs pero aun falta 
+// mostar cuales son los values recibidos en el formulario
+// y tambien mostrar el mensaje de envio corrcto del formulario
+
+
+
+

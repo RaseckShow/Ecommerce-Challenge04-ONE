@@ -22,28 +22,42 @@
     
     <section class="agregarProducto__container">
         <h3 class="title__agregarProducto">Agregar Producto</h3>
-        <form class="agregarProducto__form" action="">
-            <div  class="img__zone dropzone__agregarProducto" >
-                <div id="preview" class="preview">
-                    <p>Arrastra y suelta una imagen a esta zona ...</p>
+        <form class="agregarProducto__form" id="agregarProducto__form" action="">
+            <div class="input-container" id="input__container__archivo">
+                <span class="input-message-error" id="archivo-error">Este campo no puede estar vacio</span>
+                <div  class="img__zone dropzone__agregarProducto" id="input__container__archivo" >
+                    <div id="preview" class="preview">
+                        <p>Arrastra y suelta una imagen a esta zona ...</p>
+                    </div>
+                    <span>o</span>
+                    <button class="input__file">Seleccionar imagen</button>
+                    <input class="input__agregarProducto" type="file" name="archivo" accept="image/*" hidden>
                 </div>
-                
-                <span>o</span>
-                <button class="input__file">Seleccionar imagen</button>
-                <input type="file" accept="image/*" hidden>
             </div>
-            <input class="input__nameProduct input__agregarProducto" type="text" placeholder="Escriba el nombre del producto">
-            <select class="input__categoryProduct input__agregarProducto" name="category__producto" id="">
-                <option value="star wars">Star Wars</option>
-                <option value="consolas">Consolas</option>
-                <option value="diversos">Diversos</option>
-            </select>
-            <input class="input__price input__agregarProducto" type="text" placeholder="Escriba el precio del producto">
-            <textarea class="input__descripcion"
-            placeholder="Agregue la descripcion del producto" name="" id="" cols="30" rows="5"></textarea>
-            
-
-            <button class="agregarProducto__btn">Agregar Producto</button>
+            <div class="input-container" id="input__container__nombre">
+                <span class="input-message-error" id="nombre-error">Este campo no puede estar vacio</span>
+                <input class="input__nameProduct input__agregarProducto" name="nombre" type="text" placeholder="Escriba el nombre del producto">
+            </div>
+            <div class="input-container" id="input__container__categoria">
+                <span class="input-message-error" id="categoria-error">Selecciona una categoria</span>
+                <select class="input__categoryProduct input__agregarProducto" name="categoria" id="">
+                    <option value="">Seleccione la categoria del producto</option>
+                    <option value="star wars">Star Wars</option>
+                    <option value="consolas">Consolas</option>
+                    <option value="diversos">Diversos</option>
+                </select>
+            </div>
+            <div class="input-container" id="input__container__precio">
+                <span class="input-message-error" id="precio-error">Este campo no puede estar vacio</span>    
+                <input class="input__price input__agregarProducto" name="precio" type="number" placeholder="Escriba el precio del producto">
+            </div>    
+            <div class="input-container" id="input__container__descripcion">
+                <span class="input-message-error" id="descripcion-error">Este campo no puede estar vacio</span>
+                <textarea class="input__descripcion input__agregarProducto" name="descripcion"
+                placeholder="Agregue la descripcion del producto" name="" id="" cols="30" rows="5"></textarea>
+            </div>
+            <span id="mensaje__envioCorrecto" class="mensaje__envioCorrecto">El producto se agrego correctamente</span>
+            <button type="submit" class="agregarProducto__btn">Agregar Producto</button>
         </form>
     </section>
     
