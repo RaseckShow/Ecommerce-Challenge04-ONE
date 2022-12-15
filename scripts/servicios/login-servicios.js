@@ -1,4 +1,4 @@
-const listaAdmins = () => fetch("http://localhost:3000/admins")
+const listaAdmins = () => fetch("https://e-commerce-one.onrender.com/admins")
     .then(respuesta => respuesta.json())
     
 

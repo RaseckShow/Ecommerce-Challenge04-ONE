@@ -145,7 +145,7 @@ formulario.addEventListener("submit", (evento) =>{
         const postData = async () => {
             const nuevoProducto = getData();
             try {
-                const response = await fetch("http://localhost:3000/producto", {
+                const response = await fetch("https://e-commerce-one.onrender.com/producto", {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(nuevoProducto)
