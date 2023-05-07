@@ -37,7 +37,7 @@ btnLogin.addEventListener("click", (event) => {
     
     setTimeout(()=>{
         if (accesoValido) {
-            location.href = "agregarProducto.html";
+            location.href = "administrador.html";
             accesoValido = false;
         } else {
             document.getElementById("input__container__email").classList.remove("input__container-valido");
