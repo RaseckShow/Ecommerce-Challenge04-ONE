@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/administrador.css">
+    <title>Inventario | Raseck Shop</title>
+</head>
+<body>
+    <Section class="header__container">
+        <header class="menu__header">
+            <div class="menu__items">
+                <img src="img/logo.svg" class="menu__header__img">
+                <fieldset class="menu__buscador">
+                    <input type="text" class="input__buscador" placeholder="¿Que desea buscar?">	
+                    
+                </fieldset>
+            </div>
+        </header>
+    </Section>
+    
+    <section class="productos__container">
+        <div class="productos__todos" data-category="todosLosProductos">
+            <div class="productos__title">
+                <h2 class="title__todosLosProductos">Todos los productos</h2>
+                <a href="#"><button class="agregarProducto__btn">Agregar producto</button></a>
+            </div>
+            <div class="productos__list" data-productos>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="footer__container">
+        <div class="footer__contacto">
+            <img src="img/logo.svg" alt="" class="contacto__img">
+            <div class="footer__links">
+                <p>Quienes somos</p>
+                <p>Politica de privacidad</p>
+                <p>Programa de fidelidad</p>
+                <p>Nuestras tiendas</p>
+                <p>Quiero ser franquiciado</p>
+                <p>Quiero anunciarme aqui</p>
+            </div>
+            <div class="contacto__form">
+                <p class="text__contacto">Hable con nosotros</p>
+                <form action="" class="formulario__contact" id="formulario__contact">
+                    <div class="input-container" id="input__container__nombre">
+                        <span class="input-message-error" id="nombre-error">Este campo no es valido</span>
+                        <input type="text" name="name" class="input__name input__contacto input" placeholder="Nombre"data-tipo="name">
+                        
+                    </div>
+                    <div class="input-container" id="input__container__mensaje">
+                        <span class="input-message-error" id="mensaje-error">Este campo no es valido</span>
+                        <textarea class="input__mensaje input__contacto input" placeholder="Ingrese su mensaje aqui..." name="mensaje" id="" cols="30" rows="5"  data-tipo="mensaje"></textarea>
+                        
+                    </div>
+                    
+                    <button class="contacto__btn" type="submit">Enviar mensaje</button>
+                </form>
+                <span id="mensaje__envioCorrecto" class="mensaje__envioCorrecto">El formulario se envio correctamente</span>
+            </div>
+        </div>
+        <div class="footer__rodapie">
+            <p>Desarrollado por Cesar Navarro - 2022</p>
+            <p>Todos los derechos reservados &copy</p>
+        </div>
+    </section>
+    <script type="module" src="scripts/controllers/productos-controller-admin.js"></script>
+    <script src="scripts/validacion.js" type="module"></script>
+</body>
+</html>
