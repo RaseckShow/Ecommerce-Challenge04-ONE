@@ -4,11 +4,12 @@ const edicionProducto = (name, price, imageUrl,id) => {
     const card = document.createElement("div");
     const content = 
     `<div class="producto__box">
-    <div class="btnsEdicionProducto">
-        <img src="img/btnEliminar.png" alt="" class="eliminarProducto__img">
-        <img src="img/btnEditar.png" alt="" class="editarProducto__img">
-    </div>
-    <img src="${imageUrl}" alt="" class="producto__img">
+        <div class="imagen__card" style="background: url(./${imageUrl}) no-repeat center / cover">
+            <div class="botonesModificadores">
+                <a href="#"><button class="eliminar__btn"><img src="img/btnEliminar.png" alt=""></button></a>
+                <a href="#"><button class="editar__btn"><img src="img/btnEditar.png" alt=""></button></a>
+            </div>
+        </div>
     <h3 class="producto__name">${name}</h3>
     <p class="producto__precio">$ ${price}</p>
     <p class="producto__id"># ${id}</p>
