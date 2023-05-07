@@ -6,7 +6,7 @@ const nuevoProducto = (name, price, imageUrl) => {
     `<div class="producto__box">
     <img src="${imageUrl}" alt="" class="producto__img">
     <h3 class="producto__name">${name}</h3>
-    <p class="producto__precio">${price}</p>
+    <p class="producto__precio">$ ${price}</p>
     <a href=""><button class="verproducto__btn">Ver Producto</button></a>
     </div>`
 
