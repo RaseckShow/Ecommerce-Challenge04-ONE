@@ -5,58 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Home | Raseck Shop</title>
+    <link rel="stylesheet" href="css/cliente.css">
+    <title>Todos los productos | Raseck Shop</title>
 </head>
 <body>
     <Section class="header__container">
         <header class="menu__header">
             <div class="menu__items">
-                <img src="img/logo.svg" class="menu__header__img">
+                <a href="index.html"><img src="img/logo.svg" class="menu__header__img"></a>
                 <fieldset class="menu__buscador">
                     <input type="text" class="input__buscador" placeholder="¿Que desea buscar?">	
                     
                 </fieldset>
             </div>
-            <a href="login.html"><button class="menu__header__btn">Login</button></a>
         </header>
     </Section>
-
-    <section class="banner__container">
-        <div class="banner__text">
-            <h2 class="banner__titletext">Invierno Promocional</h2>
-            <p class="banner__subtext">Productos seleccionados con 40% de descuento</p>
-            <a href="#consolas"><button class="banner__btn">Ver Consolas</button></a>
-        </div>
-    </section>
     
     <section class="productos__container">
-        <div class="productos__starwars" data-category="starwars">
+        <div class="productos__todos" data-category="todosLosProductos">
             <div class="productos__title">
-                <h2 class="title__starwars">Star Wars</h2>
-                <a href="cliente.html"><button class="vertodo__btn">Ver Todo &#10140</button></a>
-            </div>
-            <div class="productos__list" data-productos>
-                
-            </div>
-        </div>
-    
-        
-        <div class="productos__consolas" id="consolas" data-category="consolas">
-            <div class="productos__title">
-                <h2 class="title__consolas">Consolas</h2>
-                <a href="cliente.html"><button class="vertodo__btn">Ver Todo &#10140</button></a>
-            </div>
-            <div class="productos__list" data-productos>
-                
-            </div>
-        </div>
-    
-        
-        <div class="productos__diversos" data-category="diversos">
-            <div class="productos__title">
-                <h2 class="title__diversos">Diversos</h2>
-                <a href="cliente.html"><button class="vertodo__btn">Ver Todo &#10140</button></a>
+                <h2 class="title__todosLosProductos">Todos los productos</h2>
             </div>
             <div class="productos__list" data-productos>
                 
@@ -99,7 +67,7 @@
             <p>Todos los derechos reservados &copy</p>
         </div>
     </section>
-    <script type="module" src="scripts/controllers/productos-controller.js"></script>
+    <script type="module" src="scripts/controllers/allProductos-controller-cliente.js"></script>
     <script src="scripts/validacion.js" type="module"></script>
 </body>
 </html>
