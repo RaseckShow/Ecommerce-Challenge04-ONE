@@ -1,0 +1,177 @@
+/* Seccion Header */
+.menu__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+}
+.menu__items{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+}
+.menu__buscador{
+    display: flex;
+    align-items: center;
+}
+.input__buscador{
+    width: 30vw;
+    height: 2.5rem;
+    border-radius: 20px;
+    margin-left: 10%;
+    padding-left: 15%;
+    font-size: 1.2rem;
+    color: #808080;
+    background-color: #f3f3f3;
+    border-color: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background: url(../img/lupa.png) no-repeat 5px ;
+    transform: scale(0.8);
+}
+.input__buscador:focus{
+    color: #808080;
+    transform: scale(0.85,0.85);
+}
+.menu__header__btn{
+    margin-right: 10vw;
+    width: 13vw;
+    height: 2.5rem;
+    color: #2A7AE4;
+    border-color: #2A7AE4;
+    background: none;
+    border-radius: 10px;
+}
+.menu__header__btn:hover{
+    cursor: pointer;
+}
+
+/* Seccion Productos */
+.info__producto{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 5% 10%;
+}
+.producto__img{
+    height: 35vh;
+    width: 20vw;
+    border-radius: 3%;
+    margin: 3%;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.producto__name{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.producto__precio{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+}
+
+/* Seccion Rodapie */
+.footer__container{
+    position: relative;
+    width: 100%;    
+}
+.footer__contacto{
+    background-color: #DFFDFF;
+    padding: 4% 6%;
+    display: flex;
+    justify-content: space-around;
+}
+.contacto__img{
+    height: 2rem;
+}
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    font-weight: 500;
+}
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.text__contacto{
+    font-weight: bolder;
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+.input__name, .input__mensaje{
+    background-color: #fdfdfd;
+    border: none;
+    margin-bottom: 3%;
+    padding-left: 3%;
+}
+.input__name{
+    height: 2rem;
+    border-radius: 15px;
+    width: 90%;
+}
+.input__mensaje{
+    width: 90%;
+    border-radius: 15px;
+    resize: none;
+    font-size: .9rem;
+}
+.input__name::placeholder, .input__mensaje::placeholder{
+    color: darkgrey;
+}
+.input__name:focus, .input__mensaje:focus{
+    outline: dashed #808080 ;
+}
+.contacto__btn{
+    width: 40%;
+    height: 2rem;
+    margin-left: 4%;
+    background: #2A7AE4;
+    color: #fdfdfd;
+    border: none;
+    border-radius: 8px;
+}
+.contacto__btn:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.footer__rodapie{
+    text-align: center;
+    padding: 1% 0;
+}
+
+/* ///validacion Formulario Contacto/// */
+.input-message-error{
+    display: none;
+    justify-content: center;
+    color: #ff000080;
+}
+.input__container-invalido .input{
+    border:2px dotted #ff000060;
+
+}
+.input__container-valido .input{
+    border:3px dotted #00DCF5;
+    
+}
+.mensaje__envioCorrecto, .mensaje__envioIncorrecto{
+    display: none;
+}
+.mensaje__envioCorrecto-activo{
+    color: #303030;
+    margin-top: 2%;
+    background-color: rgb(126, 242, 186);
+    border-radius: 15px;
+    opacity: 0.9;
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+}
