@@ -9,5 +9,5 @@ const contenidoCargado = window.addEventListener("load",(loaded)=>{
             });
         });
     });
-redireccionar();
+
 
