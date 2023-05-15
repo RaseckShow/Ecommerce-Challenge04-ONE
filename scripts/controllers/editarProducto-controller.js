@@ -31,6 +31,7 @@ const renderEditor = async() => {
             if(elemento.id == idProducto){
                 producto[0].appendChild(mostrarProducto(elemento.name, elemento.price,elemento.imageUrl,elemento.description));
                 localStorage.setItem("imageUrl", elemento.imageUrl);
+                localStorage.setItem("category", elemento.category);
             }    
         });
     }

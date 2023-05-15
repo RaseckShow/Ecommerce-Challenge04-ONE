@@ -21,15 +21,13 @@ const listaProductos = () => fetch("https://e-commerce-one.onrender.com/producto
         });
     };
     
-    const actualizarProducto = (imageUrl,name,price,description,id) =>{
-            console.log(JSON.stringify({imageUrl, name, price,description,id}));
-            // return fetch(`https://127.0.0.1:5500/producto/${id}`,{
+    const actualizarProducto = (category,imageUrl,name,price,description,id) =>{
         return fetch(`https://e-commerce-one.onrender.com/producto/${id}`,{
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({imageUrl, name, price,description,id})
+            body: JSON.stringify({category,imageUrl, name, price,description,id})
         })
         .then((respuesta) => respuesta)
         .catch((err) => console.log(err));
