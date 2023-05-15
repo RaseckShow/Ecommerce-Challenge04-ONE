@@ -15,9 +15,11 @@ const contenidoCargado = window.addEventListener("load",(loaded)=>{
     btnsEliminar.forEach((btnEliminar)=>{
         btnEliminar.addEventListener("click",(e)=>{
             e.preventDefault();
-            console.log("Boton Eliminar # " + e.target.id);
-            // localStorage.setItem("idProducto", e.target.id);
-            // setTimeout (window.location.href="EditarProducto.html", 3000);
+            const id = e.target.id;
+            productoServices.eliminarProducto(id).then(()=>{
+                alert("Producto eliminado con exito!");
+                setTimeout (window.location.reload(), 3000);
+            });
         });
     });
     

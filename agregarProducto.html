@@ -27,7 +27,7 @@
                 <span class="input-message-error" id="archivo-error">Este campo no puede estar vacio</span>
                 <div  class="img__zone dropzone__agregarProducto" id="input__container__archivo" >
                     <div id="preview" class="preview">
-                        <p>Arrastra y suelta una imagen a esta zona ...</p>
+                        <p class="estatus">Arrastra y suelta una imagen a esta zona ...</p>
                     </div>
                     <span>o</span>
                     <button class="input__file">Seleccionar imagen</button>
@@ -54,7 +54,7 @@
             <div class="input-container" id="input__container__descripcion">
                 <span class="input-message-error" id="descripcion-error">Este campo no puede estar vacio</span>
                 <textarea class="input__descripcion input__agregarProducto" name="descripcion"
-                placeholder="Agregue la descripcion del producto" name="" id="" cols="30" rows="5"></textarea>
+                placeholder="Agregue la descripcion del producto" name="descripcion" id="" cols="30" rows="5"></textarea>
             </div>
             <span id="mensaje__envioCorrecto" class="mensaje__envioCorrecto">El producto se agrego correctamente</span>
             <button type="submit" class="agregarProducto__btn">Agregar Producto</button>
@@ -83,6 +83,8 @@
             <p>Todos los derechos reservados &copy</p>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     <script type="module" src="scripts/nuevoProductoValidacion.js"></script>
+    <script type="module" src="scripts/servicios/productos-servicios.js"></script>
 </body>
 </html>

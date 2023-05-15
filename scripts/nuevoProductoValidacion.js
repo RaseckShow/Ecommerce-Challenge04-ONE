@@ -44,12 +44,12 @@ function processFile(file) {
             fileReader.addEventListener("load", (e) => {
             const fileURL = fileReader.result;
             const image = `<img class="img" src="${fileURL}" width="50px" height ="35px">`;
-
+            // localStorage.setItem("fileUrl",fileURL);
             dropZone.querySelector("p").innerHTML = image + `${file.name}`;
 
             dropZone.classList.add("valido");
             });
-            uploadFile(file);
+            // uploadFile();
         } else {
             dragText.textContent = "Arrastra y suelta una imagen a esta zona ...";
             alert("Inserte un archivo valido");
@@ -65,9 +65,9 @@ function processFile(file) {
     }
 }
 
-function uploadFile(file) {
-    
-}
+// function uploadFile(fileURL) {
+//     console.log("FILE:" + JSON.stringify(fileURL));
+// }
 ////////Seccion Validacion Formulario////////////////
 const formulario = document.getElementById("agregarProducto__form");
 const inputs = document.querySelectorAll(".input__agregarProducto");
@@ -134,25 +134,27 @@ inputs.forEach((input) => {
     input.addEventListener("blur",validarFormulario)
 });
 ///////// Seccion Envio de Data al Servidor///////////
+import { productoServices }from "./servicios/productos-servicios.js";
 formulario.addEventListener("submit", (evento) =>{
     evento.preventDefault();
     if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
         const getData = () =>{
-            const datos = new FormData(formulario);
-            const datosCompletos = Object.fromEntries(datos.entries());
-            return datosCompletos;
+            const datos = {
+                imageUrl: document.querySelector(".img").name,
+                name : document.querySelector(".input__nameProduct").value,
+                category: document.querySelector(".input__categoryProduct").value,
+                price: document.querySelector(".input__price").value,
+                description: document.querySelector(".input__descripcion").value,
+                id : uuid.v4()
+            }
+            return JSON.stringify(datos);
         }
         const postData = async () => {
             const nuevoProducto = getData();
             try {
-                const response = await fetch("https://e-commerce-one.onrender.com/producto", {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(nuevoProducto)
-                });
+                const response = await (productoServices.crearProducto(nuevoProducto));
                 if(response.ok){
                     formulario.reset();
-                        
                     document.getElementById("input__container__precio").classList.remove("input__container-valido");
                     document.getElementById("input__container__categoria").classList.remove("input__container-valido");            
                     document.getElementById("input__container__nombre").classList.remove("input__container-valido");

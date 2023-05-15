@@ -50,7 +50,7 @@
 
 /* Seccion Productos */
 .productos__todos{
-    height: 100vh;
+    height: auto;
 }
 .productos__title{
     padding: 3% 5% .2rem 5%;
@@ -122,7 +122,6 @@
 /* Seccion Rodapie */
 .footer__container{
     position: relative;
-    top: 50vh;
     width: 100%;    
 }
 .footer__contacto{

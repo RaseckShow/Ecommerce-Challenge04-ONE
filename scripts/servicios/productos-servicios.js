@@ -1,22 +1,22 @@
 const listaProductos = () => fetch("https://e-commerce-one.onrender.com/producto")
-    .then(respuesta => respuesta.json())
-
-    const crearProducto = (nombre,email) => {
-        return fetch("http://localhost:3000/perfil", {
+    .then(respuesta => respuesta.json());
+    
+    const crearProducto = (imageUrl,name,category,price,description,id) => {
+        return fetch("https://e-commerce-one.onrender.com/producto", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({nombre,email, id: uuid.v4()})
+            body: JSON.stringify({imageUrl,name,category,price,description, id})
         })
-    }
+    };
     
     const eliminarProducto = (id) => {
-        return fetch(`http://localhost:3000/perfil/${id}`, {method:'DELETE'});
-    }
+        return fetch(`https://e-commerce-one.onrender.com/producto/${id}`, {method:'DELETE'});
+    };
     
     const detalleCliente = (id) => {
-        return fetch(`http://localhost:3000/perfil/${id}`).then((respuesta) => {
+        return fetch(`https://e-commerce-one.onrender.com/producto/${id}`).then((respuesta) => {
             return respuesta.json();
         });
     };
@@ -37,4 +37,6 @@ const listaProductos = () => fetch("https://e-commerce-one.onrender.com/producto
 export const productoServices = {
     listaProductos,
     actualizarProducto,
+    crearProducto,
+    eliminarProducto,
 }
