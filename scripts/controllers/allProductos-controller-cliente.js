@@ -4,7 +4,7 @@ const nuevoProducto = (name, price, imageUrl,id) => {
     const card = document.createElement("div");
     const content = 
     `<div class="producto__box">
-        <div class="imagen__card" style="background: url(./${imageUrl}) no-repeat center / cover">
+        <div class="imagen__card" style="background: url(${imageUrl}) no-repeat center / cover">
             
         </div>
     <h3 class="producto__name">${name}</h3>

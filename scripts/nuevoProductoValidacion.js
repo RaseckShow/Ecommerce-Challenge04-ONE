@@ -138,21 +138,14 @@ import { productoServices }from "./servicios/productos-servicios.js";
 formulario.addEventListener("submit", (evento) =>{
     evento.preventDefault();
     if(campos.nombre && campos.categoria && campos.precio && campos.descripcion){
-        const getData = () =>{
-            const datos = {
-                imageUrl: document.querySelector(".img").name,
-                name : document.querySelector(".input__nameProduct").value,
-                category: document.querySelector(".input__categoryProduct").value,
-                price: document.querySelector(".input__price").value,
-                description: document.querySelector(".input__descripcion").value,
-                id : uuid.v4()
-            }
-            return JSON.stringify(datos);
-        }
+        const imageUrl = document.querySelector(".img").src;
+        const name  = document.querySelector(".input__nameProduct").value;
+        const category = document.querySelector(".input__categoryProduct").value;
+        const price = document.querySelector(".input__price").value;
+        const description = document.querySelector(".input__descripcion").value;
         const postData = async () => {
-            const nuevoProducto = getData();
             try {
-                const response = await (productoServices.crearProducto(nuevoProducto));
+                const response = await (productoServices.crearProducto(imageUrl,name,category,price,description));
                 if(response.ok){
                     formulario.reset();
                     document.getElementById("input__container__precio").classList.remove("input__container-valido");

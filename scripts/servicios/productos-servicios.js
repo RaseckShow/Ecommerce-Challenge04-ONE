@@ -1,13 +1,13 @@
 const listaProductos = () => fetch("https://e-commerce-one.onrender.com/producto")
     .then(respuesta => respuesta.json());
     
-    const crearProducto = (imageUrl,name,category,price,description,id) => {
+    const crearProducto = (imageUrl,name,category,price,description) => {
         return fetch("https://e-commerce-one.onrender.com/producto", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({imageUrl,name,category,price,description, id})
+            body: JSON.stringify({imageUrl,name,category,price,description, id: uuid.v4()})
         })
     };
     
