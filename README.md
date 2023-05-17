@@ -10,6 +10,14 @@
 Los elementos necesarios para el funcionamiento de la ecommerce. 
 
 ---
+## ⚙️ Funcionalidades
+- Visualizacion de productos cargados desde una base de datos
+- Ver detalles del producto seleccionado
+- Busqueda por nombre de producto
+- Realizar Login para obtener el rol de administrador
+- CRUD de prodcutos 
+
+---
 ## 💻Acceso al proyecto
 
 Para ver el proyecto funcionando, te dejo el siguiente link: (https://raseckshow.github.io/Ecommerce-Challenge04-ONE/)
