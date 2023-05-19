@@ -112,13 +112,14 @@
 }
 .productos__list{
     display: flex;
-    width: 90%;
+    width: 95%;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 5%;
+    margin: 0 2.5%;
+    justify-content: space-evenly;
 }
 .card{
-  margin-top: .5%;  
+    margin: .5% 1%;
+    flex-basis: 11rem;
 }
 .producto__box{
     display: flex;
