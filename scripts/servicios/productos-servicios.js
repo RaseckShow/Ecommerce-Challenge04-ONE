@@ -15,12 +15,6 @@ const listaProductos = () => fetch("https://e-commerce-one.onrender.com/producto
         return fetch(`https://e-commerce-one.onrender.com/producto/${id}`, {method:'DELETE'});
     };
     
-    const detalleCliente = (id) => {
-        return fetch(`https://e-commerce-one.onrender.com/producto/${id}`).then((respuesta) => {
-            return respuesta.json();
-        });
-    };
-    
     const actualizarProducto = (category,imageUrl,name,price,description,id) =>{
         return fetch(`https://e-commerce-one.onrender.com/producto/${id}`,{
             method: 'PUT',
