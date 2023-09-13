@@ -108,6 +108,7 @@
 }
 .eliminar__btn:hover, .editar__btn:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 .infoProducto{
     position: relative;
