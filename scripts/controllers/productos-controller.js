@@ -34,7 +34,7 @@ const producto = document.querySelectorAll("[data-productos]");
 const render = async() => {
     try{
         const width = document.documentElement.clientWidth;
-        
+        const loader = document.querySelector(".loader");
         const listaProductos = await productoServices.listaProductos();
         let productosMostradosStarwars = 0;
         let productosMostradosConsolas = 0;
@@ -63,6 +63,7 @@ const render = async() => {
                 break;
             }
         });
+    loader.remove();
     }
     catch(error){
         console.log(error);
