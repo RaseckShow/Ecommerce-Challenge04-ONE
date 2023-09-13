@@ -6,8 +6,8 @@ const edicionProducto = (name, price, imageUrl,id) => {
     `<div class="producto__box">
         <div class="imagen__card" name="${imageUrl}" style="background: url(${imageUrl}) no-repeat center / cover">
             <div class="botonesModificadores">
-                <a href=""><button id="${id}" class="eliminar__btn"><img id="${id}" src="img/btnEliminar.png" alt=""></button></a>
-                <a href=""><button id="${id}"  class="editar__btn"><img id="${id}" src="img/btnEditar.png" alt=""></button></a>
+                <a href=""><button id="d-${id}" class="eliminar__btn"><img  id="${id}" src="img/btnEliminar.png" alt=""></button></a>
+                <a href=""><button id="m-${id}"  class="editar__btn"><img class="edit__btn" id="${id}" src="img/btnEditar.png" alt=""></button></a>
             </div>
         </div>
     <h3 class="producto__name">${name}</h3>

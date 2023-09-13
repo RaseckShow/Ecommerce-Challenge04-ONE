@@ -22,6 +22,7 @@ const mostrarProducto = (name, price, imageUrl,descripcion) => {
 }
 
 const producto = document.querySelectorAll(".edicionProducto__container");
+const loader = document.querySelector(".loader");
 
 const renderEditor = async() => {
     try{
@@ -41,4 +42,5 @@ const renderEditor = async() => {
 }
 
 renderEditor();
+window.addEventListener("load",loader.remove());
 
