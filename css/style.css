@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     height: 13vh;
+    padding-right: 10vw;
 }
 .menu__items{
     height: 2rem;
@@ -36,7 +37,7 @@
     transform: scale(0.85,0.85);
 }
 .menu__header__btn{
-    margin-right: 10vw;
+    /* margin-right: 10vw; */
     width: 13vw;
     height: 2.5rem;
     color: #2A7AE4;
@@ -84,6 +85,7 @@
     color: #fdfdfd;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 }
 /* Seccion Productos */
 .productos__container{
